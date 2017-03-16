@@ -56,3 +56,13 @@ $route['first/'] = 'first/index';
 $route['sleep'] = "first/zzz";
 $route['lock/(:any)/(:any)'] = "welcome/shucks/$1";
 $route['show/(:num)'] = "first/gimme/$1";
+
+
+$route['dunno'] = function() {
+    $source = './data/monkey.jpg'; // an image you provide
+    // set the mime type for that image
+    header("Content-type: image/jpeg"); 
+    header('Content-Disposition: inline');
+    readfile($source); // dish it
+    die(); // and we don't have to go any further
+};
