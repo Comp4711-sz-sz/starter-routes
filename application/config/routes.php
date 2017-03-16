@@ -56,6 +56,7 @@ $route['first/'] = 'first/index';
 $route['sleep'] = "first/zzz";
 $route['lock/(:any)/(:any)'] = "welcome/shucks/$1";
 $route['show/(:num)'] = "first/gimme/$1";
+$route['([a-zA-Z]{4})/bingo'] = "bingo/index";
 
 
 $route['dunno'] = function() {
